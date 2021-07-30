@@ -1,6 +1,5 @@
 <template>
-<div class="hero" :style="[!$vuetify.breakpoint.smAndDown?
-{height: 'calc(108.4vh - 90px)'} : { height: 'calc(53% - 90px)'}]">
+<div class="hero" >
   <div class="d-flex align-center " >
     <v-row>
       <v-col>
@@ -32,7 +31,7 @@
       </v-col>
       <v-col :style="[!$vuetify.breakpoint.smAndDown? {} : { display: 'none' }]">
         <div class="mt-n5" >
-          <v-img max-width="500" max-height="700" contain :src="require('../../assets/lady.png')"></v-img>
+          <v-img max-width="300" max-height="300" contain :src="require('../../assets/lady.png')"></v-img>
         </div>
       </v-col>
     </v-row>
@@ -93,3 +92,6 @@ h1{
   height: 200px;
 }
 </style>
+
+<!--:style="[!$vuetify.breakpoint.smAndDown?-->
+<!--{height: 'calc(108.4vh - 90px)'} : { height: 'calc(53% - 90px)'}]"-->

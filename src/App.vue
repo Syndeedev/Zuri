@@ -64,8 +64,8 @@ export default {
 * {
   font-family:  Poppins, sans-serif;
   scroll-behavior: smooth !important;
-  color: #2B1C1C;
-  /*overflow-x: hidden;*/
-  /*!*overflow-y: hidden;*!*/
+  /*color: #2B1C1C;*/
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 </style>

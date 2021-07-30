@@ -1,37 +1,62 @@
 <template>
 <div class="main">
-  <v-row>
-    <v-col md="6" sm="12" class="align-center justify-center d-flex flex-column" >
-      <v-card flat color="transparent"  width="500">
+  <div class="d-flex justify-space-between align-center"
+       :style="[!$vuetify.breakpoint.mdAndDown?
+          { width: '91%', margin: '0 auto',} :
+           {fontSize: '100%', flexDirection: 'column'}]"
+       >
+    <div class="mr-16">
         <h1 class="" :style="[!$vuetify.breakpoint.smAndDown?
           { fontSize: '2.5rem'} :
            {fontSize: '1.8rem'}]"
         >Why do we help with legalization?</h1>
         <p>We are here for UMKM in Indonesia to carry out the legalization process, which is sometimes complicated.</p>
-      </v-card>
+    </div>
 
-    </v-col>
-    <v-col md="6" cols="6" sm="12">
-        <div class="d-flex align-center justify-center" style="height: 600px">
+        <div class="d-flex align-center justify-center" >
 
-              <v-card height="500" width="600"  flat class="feature" >
-                <v-row >
-                  <v-col  cols="6" v-for="(each, index) in whyLegalize" :key="index">
-                    <v-card color="#C3E8F1" height="100" width="100">{{ each.title }}</v-card>
-                  </v-col>
-                </v-row>
-              </v-card>
-
-
+                <div class="d-flex align-center flex-wrap justify-center" :style="[$vuetify.breakpoint.mdAndDown?{} : {margin: '60px'}]">
+                  <div v-for="(each, index) in whyLegalize" :key="index">
+                    <div :style="[$vuetify.breakpoint.mdAndDown?{margin: '10px'} : {marginRight: '10px'}]" class="small-card">
+                      <p>each.title</p>
+                    </div>
+                  </div>
+                </div>
         </div>
+    </div>
 
 
 
+   <div class="numbers d-flex text-center flex-column align-center justify-center">
+      <div >
+        <h1 style="font-size: 48px">Some count that matters</h1>
+        <p>Our achievement in the journey depicted in numbers</p>
+      </div>
 
-    </v-col>
-  </v-row>
+      <div class="d-flex allNumbers "  :style="[!$vuetify.breakpoint.mdAndDown? {} : {flexDirection: 'column'}]">
+        <div>
+          <h1>30</h1>
+          <p>Clients</p>
+        </div>
+        <div class="px-10">
+          <h1>300+</h1>
+          <p>Token Business Legalities</p>
+        </div>
+        <div>
+          <h1>8</h1>
+          <p>Years of Journey</p>
+        </div>
+      </div>
+   </div>
 
 
+    <div>
+      <h1 class="my-10">Clients Testimonial</h1>
+      <div class="testimonialCard">
+
+      </div>
+
+    </div>
 </div>
 </template>
 
@@ -54,8 +79,8 @@ name: "FirstMainContentSection",
 <style scoped>
 .main{
   width: 100vw;
-  height: 600px;
-  background: #C3E8F1;
+  /*height: 600px;*/
+  background: #F2FCFF;
 
 }
 h1{
@@ -65,5 +90,25 @@ h1{
 .feature{
   background: #FCFCFC;
 
+}
+.small-card{
+
+  background: #FCFCFC;
+  box-shadow: 0px 18px 58px 16px rgba(0, 0, 0, 0.06);
+  border-radius: 8px;
+  width: 206px;
+  min-height: 203px;
+  margin-bottom: 10px;
+}
+.numbers{
+  background-image: url("../../assets/BG.png");
+  background-size: cover;
+  color: #ffffff !important;
+}
+.allNumbers h1{
+  font-size: 64px;
+}
+.allNumbers{
+  margin: 20px 0;
 }
 </style>
