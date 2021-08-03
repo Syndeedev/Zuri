@@ -46,24 +46,6 @@ name: "TestimonialSection",
         name: "Anya Tailor Joy",
         position: "CEO, SF Industries"
       },
-      {
-        comment: "Incredible Experience",
-        description: "We had an incredible experience working with Landify and were impressed they made such a big\n" +
-            "              difference in only three weeks. Our team is so grateful for the wonderful improvements they\n" +
-            "              made and their ability to get familiar with the concept so quickly.",
-        image: require('../../assets/hero-img.jpg'),
-        name: "Anya Tailor Joy",
-        position: "CEO, SF Industries"
-      },
-        {
-        comment: "Incredible Experience",
-        description: "We had an incredible experience working with Landify and were impressed they made such a big\n" +
-            "              difference in only three weeks. Our team is so grateful for the wonderful improvements they\n" +
-            "              made and their ability to get familiar with the concept so quickly.",
-        image: require('../../assets/hero-img.jpg'),
-        name: "Anya Tailor Joy",
-        position: "CEO, SF Industries"
-      },
         {
         comment: "Incredible Experience",
         description: "We had an incredible experience working with Landify and were impressed they made such a big\n" +
