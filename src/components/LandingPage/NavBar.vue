@@ -24,7 +24,9 @@
 <!--        width="75%"-->
 <!--    ></v-navigation-drawer>-->
 
-    <div class="d-flex justify-space-between" style="width: 100%; padding: 0 5rem">
+    <div
+        :style="[!$vuetify.breakpoint.xs? {padding: '0 5rem'} : { padding: '0 20px'}]"   class="d-flex  justify-space-between"
+        style="width: 100%;">
       <div>
         <h1 style="font-family:  Playfair Display; color: #094B72">Zuri</h1>
       </div>

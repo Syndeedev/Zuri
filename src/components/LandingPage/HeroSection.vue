@@ -4,20 +4,20 @@
     <v-row>
       <v-col>
         <div :style="[!$vuetify.breakpoint.smAndDown? {marginLeft: '5rem'} : { margin: ' 0 20px'  }]">
-          <h1 :style="[!$vuetify.breakpoint.smAndDown?
+          <h1 class="pb-2" :style="[!$vuetify.breakpoint.smAndDown?
           {paddingTop: '5rem', fontSize: '4rem',lineHeight: '80px'} :
            { paddingTop: '3rem',fontSize: '2.5rem',lineHeight: '40px' }]" >
             Your Solution Legal Consultancy
           </h1>
           <div :style="[ !$vuetify.breakpoint.smAndDown?
                {margin: '25px 0', fontSize: '1.5rem',lineHeight: '30px'} :
-          {margin: '22px 0', fontSize: '1rem',lineHeight: '21px'}]">
+          {margin: '23px 0', fontSize: '1rem',lineHeight: '21px'}]">
 
             <p >
               We are here to help you take care of your legality with the best service especially for you.</p>
           </div>
 
-          <v-btn dark color="#094B72" class="pa-7 ">Get Started</v-btn>
+          <v-btn depressed dark color="#094B72" class="pa-7 rounded-lg ">Get Started</v-btn>
           <p :style="[!$vuetify.breakpoint.smAndDown? { marginTop: '25px', letterSpacing: '1.5px'}: {marginTop: '22px'}]">
             Trusted by 10+ companies in indonesia</p>
           <div class="logos">
@@ -30,8 +30,8 @@
         </div>
       </v-col>
       <v-col :style="[!$vuetify.breakpoint.smAndDown? {} : { display: 'none' }]">
-        <div class="mt-n5" >
-          <v-img max-width="300" max-height="300" contain :src="require('../../assets/lady.png')"></v-img>
+        <div class="mt-n5 ml-16" >
+          <img class="ml-16" alt="lady" height="700" :src="require('../../assets/lady.png')">
         </div>
       </v-col>
     </v-row>
@@ -84,14 +84,9 @@ h1{
   font-size: 70px;
   line-height: 80px;
 }
-/*.hero-title{*/
-/*  width: 150px;*/
-/*}*/
+
 .logos{
   width: 200px;
   height: 200px;
 }
 </style>
-
-<!--:style="[!$vuetify.breakpoint.smAndDown?-->
-<!--{height: 'calc(108.4vh - 90px)'} : { height: 'calc(53% - 90px)'}]"-->

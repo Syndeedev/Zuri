@@ -6,6 +6,9 @@
 <!--  <Header/>-->
 <!--  <Hero/>-->
 <!--  <ExploreEventOverview/>-->
+  <TestimonialSection/>
+  <ComplexQuestions/>
+  <Footer/>
 </div>
 </template>
 
@@ -16,9 +19,15 @@
 import NavBar from "@/components/LandingPage/NavBar";
 import HeroSection from "@/components/LandingPage/HeroSection";
 import FirstMainContentSection from "@/components/LandingPage/FirstMainContentSection";
+import ComplexQuestions from "@/components/LandingPage/ComplexQuestions";
+import Footer from "@/components/LandingPage/Footer";
+import TestimonialSection from "@/components/LandingPage/TestimonialSection";
 export default {
   name: "LandingPageView",
   components: {
+    TestimonialSection,
+    Footer,
+    ComplexQuestions,
     FirstMainContentSection,
     HeroSection, NavBar,
     // ExploreEventOverview,
