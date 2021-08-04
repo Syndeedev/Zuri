@@ -10,6 +10,16 @@
 import LandingPageView from "@/views/LandingPageView";
 import RevolvingCircle from "@/components/LandingPage/RevolvingCircle";
 
+// const options = {
+//   root: null, /* uses the page as root */
+//   threshold: 0
+// };
+
+
+// const  faders = Array.from(document.querySelectorAll('.fade-in'))
+// document.addEventListener('scroll' , handleScroll);
+
+// let observer;
 export default {
   name: 'App',
 
@@ -19,14 +29,26 @@ export default {
   },
 
   data: () => ({
-    loading:true
+    loading:true,
+    users: [],
+    observer: null
+
   }),
   created() {
     // this.loading = true
       setTimeout(()=>{
         this.loading = false
-      },3000);
-  }
+      },2000);
+  },
+  // mounted:{
+  //   this.observer = new IntersectionObserver(this.callback, options),
+  //  handleScroll(){
+  //
+  //  }
+  // },
+  // destroyed() {
+  //   document.removeEventListener('scroll', handleScroll)
+  // }
 };
 </script>
 
@@ -37,5 +59,12 @@ export default {
   /*color: #2B1C1C;*/
   overflow-x: hidden;
   overflow-y: hidden;
+}
+.fade-in{
+ opacity: 0;
+  transition: opacity 250ms ease-in;
+}
+.fade-in.appear{
+  opacity: 1;
 }
 </style>

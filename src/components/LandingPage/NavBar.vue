@@ -30,16 +30,26 @@
       <div>
         <h1 style="font-family:  Playfair Display; color: #094B72">Zuri</h1>
       </div>
-      <div class="justify-space-around align-center" :style="[!$vuetify.breakpoint.smAndDown? {display: 'flex'} : { display: 'none' }]">
+      <div class="justify-center align-center" :style="[!$vuetify.breakpoint.smAndDown? {display: 'flex'} : { display: 'none' }]">
         <div >
           <v-btn small text>Contact</v-btn>
           <v-btn small text>Testimonials</v-btn>
           <v-btn small text>About</v-btn>
           <v-btn small text>Terms</v-btn>
         </div>
-        <div style="padding-left: 5rem">
-          <v-btn icon><v-icon>mdi-magnify</v-icon></v-btn>
+        <div class="mt-7">
+          <v-text-field
+              v-model="search"
+              append-icon="mdi-magnify"
+              label="Search"
+              solo-inverted
+              flat
+              class="search-box"
+          ></v-text-field>
         </div>
+<!--        <div style="padding-left: 5rem">-->
+<!--          <v-btn @click="showSearch = !showSearch" icon><v-icon>mdi-magnify</v-icon></v-btn>-->
+<!--        </div>-->
 
       </div>
     </div>
@@ -54,8 +64,14 @@ name: "NavBar",
   data: () => ({
     drawer: false,
     group: null,
+    showSearch: false
 
-  })
+  }),
+  // methods:{
+  // changeShowSearchState(){
+  //   this.showSearch =
+  // }
+  // }
 }
 </script>
 
