@@ -103,20 +103,18 @@ h1{
   font-family: Playfair Display;
   /*font-size: 70px;*/
 }
-.feature{
-  background: #FCFCFC;
 
-}
 .small-card{
-
   background: #FCFCFC;
   box-shadow: 2px 5px 10px #eaeaea;
   border-radius: 8px;
-  /*width: 206px;*/
-  /*min-height: 203px;*/
   padding: 10px;
   font-size: 13px;
-  /*margin-bottom: 10px;*/
+  transition: 0.5s ease all;
+}
+.small-card:hover{
+  transform: rotateZ(-1deg) scale(1.01);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
 .numbers{
