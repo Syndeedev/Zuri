@@ -6,7 +6,7 @@
           {} : { flexDirection: 'column',  padding: '20px'}]" class="d-flex mainWrap">
 
         <div class="testimonialCardWrap" v-for="(testimonial, index) in testimonials" :key="index">
-          <div  :style="[!$vuetify.breakpoint.smAndDown? {width: '350px', height: '230px' } : {width: '300px', height: '230px'}]"
+          <div  :style="[!$vuetify.breakpoint.mdAndDown? {width: '350px', height: '230px' } : {width: '300px', height: '230px'}]"
                 class="testimonialCard">
             <h3>{{ testimonial.comment }}</h3>
             <p class="pt-2">{{testimonial.description}}</p>

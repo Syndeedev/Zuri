@@ -27,7 +27,7 @@
     <div
         :style="[!$vuetify.breakpoint.xs? {padding: '0 5rem'} : { padding: '0 20px'}]"   class="d-flex  justify-space-between"
         style="width: 100%;">
-      <div>
+      <div class="d-flex justify-center align-center">
         <h1 style="font-family:  Playfair Display; color: #094B72">Zuri</h1>
       </div>
       <div class="justify-center align-center" :style="[!$vuetify.breakpoint.smAndDown? {display: 'flex'} : { display: 'none' }]">
@@ -37,7 +37,7 @@
           <v-btn small text>About</v-btn>
           <v-btn small text>Terms</v-btn>
         </div>
-        <div class="mt-7">
+        <div class="pt-7">
           <v-text-field
               v-model="search"
               append-icon="mdi-magnify"
@@ -64,7 +64,8 @@ name: "NavBar",
   data: () => ({
     drawer: false,
     group: null,
-    showSearch: false
+    showSearch: false,
+    search: ""
 
   }),
   // methods:{
