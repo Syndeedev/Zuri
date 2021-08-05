@@ -1,6 +1,6 @@
 <template>
 <div class="main">
-    <div class="d-flex justify-space-between align-center"
+    <div data-aos="fade" class="d-flex justify-space-between align-center"
        :style="[!$vuetify.breakpoint.mdAndDown?
           { width: '91%', margin: '0 auto', padding: ' 0'} :
            {fontSize: '100%', flexDirection: 'column',  padding: '20px 0'}]"
@@ -19,13 +19,16 @@
 
         <div class="d-flex align-center flex-wrap justify-center" :style="[$vuetify.breakpoint.mdAndDown?{} : {margin: '60px'}]">
           <div v-for="(each, index) in whyLegalize" :key="index">
-            <div :style="[!$vuetify.breakpoint.mdAndDown?{margin: '10px',width: '250px', height: '250px'}
+            <div data-aos="slide-up" data-aos-delay="100">
+              <div  :style="[!$vuetify.breakpoint.mdAndDown?{margin: '10px',width: '250px', height: '250px'}
                   : {margin: '10px', width: '300px', height: '206px'}]"
-                 class="small-card pa-5">
-              <img :src="`${each.image}`" alt="none">
-              <h3 class="py-5">{{each.title}}</h3>
-              <p>{{each.description}}</p>
+                   class="small-card pa-5">
+                <img :src="`${each.image}`" alt="none">
+                <h3 class="py-5">{{each.title}}</h3>
+                <p>{{each.description}}</p>
+              </div>
             </div>
+
           </div>
         </div>
       </div>
@@ -113,7 +116,7 @@ h1{
   transition: 0.5s ease all;
 }
 .small-card:hover{
-  transform: rotateZ(-1deg) scale(1.01);
+  transform: rotateZ(-1.5deg) scale(1.01);
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
